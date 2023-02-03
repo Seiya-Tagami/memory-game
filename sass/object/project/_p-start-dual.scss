@@ -1,0 +1,80 @@
+@use "../../foundation/variables" as *;
+
+.p-start-dual {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 100px;
+  display: none;
+
+  &__container {
+    padding: 20px;
+    border-radius: 10px;
+    background: $color-light-gray;
+    color: $color-light-gray;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    max-width: 460px;
+    width: 80%;
+    height: 115px;
+    margin: 32px auto;
+    padding: 0 20px;
+    border-radius: 10px;
+    background: $color-purple;
+    font-size: 24px;
+  }
+
+  &__input {
+    width: 80%;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+
+    &-determine {
+      padding: 3px 56px;
+      border: 4px solid $color-brawn;
+      border-radius: 15px;
+      background: $color-purple;
+      font-size: 24px;
+      text-align: center;
+      opacity: 0.8;
+      cursor: pointer;
+      user-select: none;
+
+      & p {
+        color: $color-light-gray;
+      }
+
+      &:hover {
+        opacity: 1;
+        transition: opacity 0.4s;
+      }
+
+      & p {
+        line-height: 53px;
+      }
+    }
+
+    &-back {
+      color: $color-light-gray;
+      background: $color-purple;
+      border: 3px solid $color-brawn;
+      border-radius: 5px;
+      padding: 16px;
+      opacity: 0.8;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+        transition: opacity 0.4s;
+      }
+    }
+  }
+}

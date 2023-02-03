@@ -1,0 +1,94 @@
+@use "../../foundation/variables" as *;
+
+.p-triple-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  margin-top: 50px;
+  display: none;
+  user-select: none;
+
+  &__item {
+    max-width: 300px;
+    width: 100%;
+    height: 278px;
+    border: 2px solid $color-black;
+    border-radius: 15px;
+    background-color: $color-light-purple;
+
+    &__content {
+      padding: 24px;
+
+      &__text1 {
+        font-size: 18px;
+      }
+      &__text2 {
+        font-size: 32px;
+        border-bottom: 5px double #bdc0ba;
+      }
+      &__your-turn {
+        margin-top: 40px;
+        padding: 5px;
+        border-radius: 4px;
+        background: $color-dark-blue;
+        color: $color-light-gray;
+        font-size: 32px;
+        text-align: center;
+      }
+      &__score {
+        margin-top: 30px;
+        font-size: 24px;
+      }
+      &__win {
+        text-align: center;
+        color: $color-gold;
+        font-size: 32px;
+      }
+      &__lose {
+        @extend .p-triple-menu__item__content__win;
+        color: $color-dark-blue;
+      }
+      &__draw {
+        @extend .p-triple-menu__item__content__win;
+        color: $color-green;
+      }
+    }
+
+    &-replay {
+      max-width: 300px;
+      width: 100%;
+      height: 94px;
+      border: 2px solid $color-black;
+      border-radius: 15px;
+      background-color: $color-light-purple;
+
+      &__container {
+        display: flex;
+        gap: 8px;
+        padding: 5px 16px;
+      }
+
+      &__button {
+        color: $color-light-gray;
+        background: $color-purple;
+        border: 3px solid $color-brawn;
+        border-radius: 5px;
+        padding: 4px 10px;
+        font-size: 24px;
+        opacity: 0.8;
+        text-decoration: none;
+        cursor: pointer;
+
+        & p {
+          color: inherit;
+        }
+
+        &:hover {
+          opacity: 1;
+          transition: opacity 0.4s;
+        }
+      }
+    }
+  }
+}

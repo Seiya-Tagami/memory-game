@@ -1,0 +1,45 @@
+@use "../../foundation/variables" as *;
+
+.p-start {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 100px;
+  text-align: center;
+
+  &__container {
+    background: $color-light-gray;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  &__text {
+    width: 100%;
+    display: inline-block;
+    font-size: 64px;
+    font-weight: bold;
+    user-select: none;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 20px;
+
+    &__item {
+      padding: 16px;
+      opacity: 0.8;
+      border: 5px solid $color-brawn;
+      border-radius: 5px;
+      font-size: 24px;
+      background: $color-purple;
+      color: $color-light-gray;
+      user-select: none;
+
+      &:hover {
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+    }
+  }
+}

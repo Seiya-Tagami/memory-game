@@ -1,0 +1,59 @@
+@use "../../foundation/variables" as *;
+
+.p-menu {
+  display: none;
+  width: 300px;
+  height: 500px;
+  margin-top: 50px;
+  border: 2px solid $color-black;
+  border-radius: 15px;
+  background-color: $color-light-purple;
+
+  &__item {
+    text-align: center;
+    font-size: 64px;
+    padding: 24px;
+    user-select: none;
+
+    & span {
+      font-size: 24px;
+    }
+
+    &__result {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__replay {
+      display: none;
+      gap: 8px;
+
+      &__button {
+        display: inline-block;
+        background: $color-purple;
+        color: $color-light-gray;
+        border: 3px solid $color-brawn;
+        border-radius: 5px;
+        padding: 4px 10px;
+        font-size: 24px;
+        opacity: 0.8;
+        text-decoration: none;
+        cursor: pointer;
+
+        & p {
+          color: inherit;
+        }
+
+        &:hover {
+          opacity: 1;
+          transition: opacity 0.4s;
+        }
+      }
+    }
+  }
+}
+
+#p-menu__item__result-rank {
+  font-size: 64px;
+}

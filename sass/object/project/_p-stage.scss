@@ -1,0 +1,39 @@
+@use "../../foundation/variables" as *;
+
+.p-stage {
+  max-width: 800px;
+  width: 100%;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+  background: $color-gray;
+  z-index: 0;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 80%;
+    margin: 3% -10% 0;
+    background: $color-dark-blue;
+    transform-origin: right center;
+    transform: rotate(-3deg);
+    z-index: -1;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 125%;
+    height: 80%;
+    margin: -15% -11% 0;
+    background: $color-dark-red;
+    transform-origin: left;
+    transform: rotate(23deg);
+    z-index: -2;
+  }
+}

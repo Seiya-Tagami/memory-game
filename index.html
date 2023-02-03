@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./sass/style.css" />
+    <script src="./script/soloPlay.js" defer></script>
+    <script src="./script/dualPlay.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="l-main">
+        <div class="p-stage">
+          <div id="js-card-box">
+            <!-- ここに挿入 -->
+          </div>
+          <div class="p-start">
+            <div class="p-start__container">
+              <span class="p-start__text">記憶力<br />チャレンジ！<br />～神経衰弱～</span>
+              <ul class="p-start__button">
+                <li>
+                  <button id="js-soloPlay" class="p-start__button__item">ひとりで遊ぶ</button>
+                </li>
+                <li>
+                  <button id="js-dualPlay" class="p-start__button__item">ふたりで遊ぶ</button>
+                </li>
+              </ul>
+              <span>Made by Seiya-Tagami</span>
+            </div>
+          </div>
+          <div class="p-start-dual">
+            <div class="p-start-dual__container">
+              <div class="p-start-dual__box">
+                <p>プレイヤーA</p>
+                <input id="js-yourname1" class="p-start-dual__input" type="text" placeholder="名前を入力してね(7文字以内)" />
+              </div>
+              <div class="p-start-dual__box">
+                <p>プレイヤーB</p>
+                <input id="js-yourname2" class="p-start-dual__input" type="text" placeholder="名前を入力してね(7文字以内)" />
+              </div>
+              <div class="p-start-dual__buttons">
+                <button class="p-start-dual__buttons-determine">
+                  <p>決定</p>
+                </button>
+                <a href="" class="p-start-dual__buttons-back">選択画面へ戻る</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-menu">
+          <ul class="p-menu__item">
+            <li class="p-menu__item__count-down"></li>
+            <li class="p-menu__item__count-up"></li>
+            <li class="p-menu__item__result"></li>
+            <li class="p-menu__item__replay">
+              <button id="js-replay" class="p-menu__item__replay__button">
+                <p>やりなおす</p>
+              </button>
+              <a href="" class="p-menu__item__replay__button">選択画面へ戻る</a>
+            </li>
+          </ul>
+        </div>
+        <div class="p-triple-menu">
+          <div class="p-triple-menu__item">
+            <ul class="p-triple-menu__item__content">
+              <li>
+                <p class="p-triple-menu__item__content__text1">プレイヤーA</p>
+                <p id="js-reflectedName1" class="p-triple-menu__item__content__text2"></p>
+              </li>
+              <li id="js-player1-score" class="p-triple-menu__item__content__score">得点 0点</li>
+              <li id="js-player1-your-turn" class="p-triple-menu__item__content__your-turn">あなたの番です</li>
+              <li id="js-player1-result"></li>
+            </ul>
+          </div>
+          <div class="p-triple-menu__item">
+            <ul class="p-triple-menu__item__content">
+              <li>
+                <p class="p-triple-menu__item__content__text1">プレイヤーB</p>
+                <p id="js-reflectedName2" class="p-triple-menu__item__content__text2"></p>
+              </li>
+              <li id="js-player2-score" class="p-triple-menu__item__content__score">得点 0点</li>
+              <li id="js-player2-your-turn" class="p-triple-menu__item__content__your-turn">あなたの番です</li>
+              <li id="js-player2-result"></li>
+            </ul>
+          </div>
+          <div class="p-triple-menu__item-replay">
+            <div class="p-triple-menu__item-replay__container">
+              <button id="js-replay2" class="p-triple-menu__item-replay__button">
+                <p>やりなおす</p>
+              </button>
+              <a href="" class="p-triple-menu__item-replay__button">選択画面へ戻る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
