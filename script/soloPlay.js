@@ -1,4 +1,5 @@
 "use strict";
+
 {
   const cards = [];
   const cardBox = document.getElementById("js-card-box");
